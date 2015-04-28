@@ -1,0 +1,13 @@
+# don't upload folders containing data
+*.input/
+0.*/
+# don't upload folders containing results and figures
+*.output/
+*.figures/
+*.tables/
+# don't upload back-up files
+*_copy/
+*_backup/
+# don't upload publication documents folder
+z.Manual/
+z.Presentation/

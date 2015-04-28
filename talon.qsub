@@ -1,0 +1,18 @@
+#!/bin/bash
+#$ -V
+#$ -cwd
+#$ -q parallel.q
+#$ -l tomlab=true
+#$ -l exclusive_job=1
+#$ -pe openmpi_16 16
+#$ -m abe
+
+## SETUP STORAGE ##
+#STORAGE_DIR="/storage/scratch/$USER/$JOB_ID"
+#mkdir -pv $STORAGE_DIR
+#cd $STORAGE_DIR
+## COPY FILES ##
+#cp -r $SGE_O_WORKDIR/* $STORAGE_DIR
+
+## EXECUTE CODE ##
+matlab -nodisplay -nosplash < zrun.oral.m > zout.txt 
